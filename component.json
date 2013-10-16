@@ -1,0 +1,24 @@
+{
+  "name": "popup-video",
+  "repo": "bmcmahen/popup-video",
+  "description": "show certain dom elements at particular points during video playback",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "anthonyshort/after-transition": "*",
+    "component/classes": "*",
+    "ianstormtaylor/redraw": "*",
+    "component/emitter": "*",
+    "component/events": "*"
+  },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ],
+  "styles": [
+    "popup-video.css"
+  ],
+  "remotes": []
+}

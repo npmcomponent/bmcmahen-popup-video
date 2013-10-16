@@ -1,0 +1,53 @@
+<html>
+<head>
+  <title></title>
+  <link href='build/build.css' rel='stylesheet'>
+  <style>
+   .container {
+    position: relative;
+    width: 650px;
+    height: 400px;
+   }
+
+   h5 {
+    padding: 0;
+   }
+
+   video {
+    width: 100%;
+   }
+  </style>
+</head>
+<body>
+
+<div class='container'>
+<video src='sample_files/anderson.m4v' autoplay></video>
+</div>
+
+<script src='build/build.js'></script>
+<script>
+var popupvideo = require('popup-video');
+var el = document.querySelector('video');
+var json = {
+  2: {
+    duration: 10,
+    html: '<h5> Michener Center </h5> <p> <a href="#">learn more </a></p>'
+  },
+
+  4: {
+    duration: 15,
+    html: '<p> world </p>'
+  }
+}
+var pop = new popupvideo(el, json);
+pop.on('showing', function(){
+  console.log('showing');
+});
+pop.on('hidden', function(){
+  console.log('hidden');
+});
+
+</script>
+
+</body>
+</html>

@@ -39,10 +39,9 @@ PopupVideo.prototype.ontimeupdate = function(data){
   if (this.currentSeconds === current) return;
   this.currentSeconds = current;
   var currentMarker = this.markers[current];
-  console.log('current marker', currentMarker);
-    if (currentMarker) {
-      this.showNotification(currentMarker);
-    }
+  if (currentMarker) {
+    this.showNotification(currentMarker);
+  }
 };
 
 PopupVideo.prototype.showNotification = function(json){
@@ -61,8 +60,6 @@ PopupVideo.prototype.showNotification = function(json){
   }, json.duration * 1000 || 10000);
 };
 
-
-
 PopupVideo.prototype.hideNotification = function(el, json){
   var self = this;
   afterTransition.once(el, function(){
@@ -70,6 +67,11 @@ PopupVideo.prototype.hideNotification = function(el, json){
     self.emit('hidden', el, json, self);
   });
   classes(el).remove('show-notification');
+};
+
+PopupVideo.prototype.close = PopupVideo.prototype.remove = function(){
+  this.events.unbind();
+  this.el.parentNode.removeChild(this.el);
 };
 
 

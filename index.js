@@ -35,7 +35,7 @@ PopupVideo.prototype.bind = function(){
 };
 
 PopupVideo.prototype.ontimeupdate = function(data){
-  var current = Math.ceil(this.video.currentTime);
+  var current = this.video.currentTime | 0;
   if (this.currentSeconds === current) return;
   this.currentSeconds = current;
   var currentMarker = this.markers[current];

@@ -5,6 +5,7 @@ var Emitter = require('emitter');
 var VideoEmitter = require('video-emitter');
 var events = require('events');
 var hover = require('hover');
+var within = require('within');
 
 // Markers should be formatted like:
 //
@@ -71,10 +72,11 @@ PopupVideo.prototype.showNotification = function(seconds, data){
   var hovering, expired;
 
   if (this._pauseOnHover) {
-    hover(el, function(){
+    hover(el, function(e){
       hovering = true;
       self.video.pause();
-    }, function(){
+    }, function(e){
+      if (within(e, el)) return;
       hovering = false;
       self.video.play();
       if (expired) self.hideNotification.call(self, el, data);

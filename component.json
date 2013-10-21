@@ -12,7 +12,8 @@
     "component/events": "*",
     "bmcmahen/video-emitter": "*",
     "stagas/hover": "*",
-    "component/preloader": "*"
+    "component/preloader": "*",
+    "stagas/within": "*"
   },
   "development": {},
   "license": "MIT",

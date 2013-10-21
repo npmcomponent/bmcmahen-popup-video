@@ -16,6 +16,11 @@
    video {
     width: 100%;
    }
+
+   li {
+    z-index: 50;
+   }
+
   </style>
 </head>
 <body>
@@ -30,7 +35,7 @@ var popupvideo = require('popup-video');
 var el = document.querySelector('video');
 var json = {
   2: {
-    duration: 10,
+    duration: 4,
     html: '<h5> Michener Center </h5> <p> <a href="#">learn more </a></p>'
   },
 
@@ -40,6 +45,7 @@ var json = {
   }
 }
 var pop = new popupvideo(el, json);
+pop.pauseOnHover();
 pop.on('showing', function(){
   console.log('showing');
 });

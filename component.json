@@ -9,7 +9,10 @@
     "component/classes": "*",
     "ianstormtaylor/redraw": "*",
     "component/emitter": "*",
-    "component/events": "*"
+    "component/events": "*",
+    "bmcmahen/video-emitter": "*",
+    "stagas/hover": "*",
+    "component/preloader": "*"
   },
   "development": {},
   "license": "MIT",

@@ -1,0 +1,22 @@
+{
+  "name": "bmcmahen-popup-video",
+  "description": "show certain dom elements at particular points during video playback",
+  "version": "0.0.1",
+  "keywords": [],
+  "main": "index.js",
+  "styles": [
+    "popup-video.css"
+  ],
+  "dependencies": {
+    "anthonyshort-after-transition": "git://github.com/npmcomponent/anthonyshort-after-transition.git",
+    "component-classes": "git://github.com/npmcomponent/component-classes.git",
+    "ianstormtaylor-redraw": "git://github.com/npmcomponent/ianstormtaylor-redraw.git",
+    "component-emitter": "git://github.com/npmcomponent/component-emitter.git",
+    "component-events": "git://github.com/npmcomponent/component-events.git",
+    "bmcmahen-video-emitter": "git://github.com/npmcomponent/bmcmahen-video-emitter.git",
+    "stagas-hover": "git://github.com/npmcomponent/stagas-hover.git",
+    "component-preloader": "git://github.com/npmcomponent/component-preloader.git",
+    "stagas-within": "git://github.com/npmcomponent/stagas-within.git"
+  },
+  "license": "MIT"
+}

@@ -1,11 +1,11 @@
-var afterTransition = require('after-transition');
-var classes = require('classes');
-var redraw = require('redraw');
-var Emitter = require('emitter');
-var VideoEmitter = require('video-emitter');
-var events = require('events');
-var hover = require('hover');
-var within = require('within');
+var afterTransition = require('anthonyshort-after-transition');
+var classes = require('component-classes');
+var redraw = require('ianstormtaylor-redraw');
+var Emitter = require('component-emitter');
+var VideoEmitter = require('bmcmahen-video-emitter');
+var events = require('component-events');
+var hover = require('stagas-hover');
+var within = require('stagas-within');
 
 // Markers should be formatted like:
 //
